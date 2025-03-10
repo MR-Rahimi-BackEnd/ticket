@@ -1,13 +1,13 @@
 Event Management System
-این پروژه برای مدیریت رویدادها و شرکت‌کنندگان طراحی شده است. ویژگی‌های اصلی شامل ایجاد و بازیابی رویدادها همراه با شرکت‌کنندگان و بلیت‌های مربوطه است. این سیستم همچنین اعتبارسنجی تعداد شرکت‌کنندگان در مقابل حداکثر تعداد شرکت‌کنندگان هر رویداد و اطمینان از منحصر به فرد بودن آدرس‌های ایمیل برای هر شرکت‌کننده را انجام می‌دهد.
+This project is designed to manage events and attendees. The main features include creating and retrieving events along with their corresponding attendees and tickets. The system also validates the number of attendees against the maximum allowed for each event and ensures that email addresses are unique for each attendee.
 
-ویژگی‌ها
-ایجاد و بازیابی رویدادها همراه با شرکت‌کنندگان و بلیت‌های مربوطه.
-اعتبارسنجی تعداد شرکت‌کنندگان در مقابل حداکثر تعداد شرکت‌کنندگان هر رویداد.
-اطمینان از منحصر به فرد بودن آدرس‌های ایمیل برای هر شرکت‌کننده.
-استفاده از SQLite به عنوان پایگاه داده برای توسعه و آزمایش محلی.
-ساختار پروژه
-مدل‌ها
-Event: مدل برای ذخیره جزئیات رویداد (عنوان، تاریخ، مکان و حداکثر تعداد شرکت‌کنندگان).
-Attendee: مدل برای ذخیره اطلاعات شرکت‌کننده (نام و ایمیل).
-Ticket: مدل برای ارتباط یک شرکت‌کننده با یک رویداد (کلید خارجی رویداد و شرکت‌کننده).
+Features
+Create and retrieve events along with their attendees and associated tickets.
+Validate the number of attendees against the maximum allowed for each event.
+Ensure unique email addresses for each attendee.
+Use of SQLite as the database for local development and testing.
+Project Structure
+Models
+Event: Model for storing event details (title, date, location, and maximum number of attendees).
+Attendee: Model for storing attendee information (name and email).
+Ticket: Model for linking an attendee to an event (foreign key for event and attendee).
