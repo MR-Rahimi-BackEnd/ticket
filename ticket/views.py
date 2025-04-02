@@ -16,13 +16,15 @@ class EventViewSet(viewsets.ViewSet):
     querset = Event.objects.all()
     
     def list(self , request):
-        queryset = Event.objects.all()
+        queryset = Event.objects.prefetch_related('attendee')
+        # queryset = Event.objects.all()
+        
         serializer = EventSerizlizer(queryset ,  many = True)
         
         return Response (serializer.data)
     
     
-    @action(detail=False , methods = ['POST'] , permission_classes = [IsSuperUser])
+    @action(detail=False , methods = ['POST'])
     def post_event(self , request):
         serializer = EventSerizlizer(data = request.data)
         
@@ -85,12 +87,9 @@ class AttendeeViewSet(viewsets.ViewSet):
         
         
 class TicketViewSet(viewsets.ViewSet):
-    queryset = Ticket.objects.all()
-    
-    
     
     def list(self,request):
-        queryset = Ticket.objects.all()
+        queryset = Ticket.objects.select_related('event' , 'attendee')
         serializer = TicketSerizlizer(queryset,many=True)
         return Response (serializer.data)
     
@@ -121,6 +120,8 @@ class TicketViewSet(viewsets.ViewSet):
         
         
         event.participants +=1
+        event.save()
+        event.attendee.add(attendee)
         event.save()
 
         ticket = Ticket.objects.create(event=event, attendee=attendee)

@@ -6,9 +6,10 @@ from .models import Attendee , Event , Ticket
 
 
 class EventSerizlizer(serializers.ModelSerializer):
+    # ateendee = serializers.
     class Meta:
         model = Event
-        fields = ['id' , 'title' , 'location' , 'date' , 'max_participants']
+        fields = ['id' , 'title' , 'location' , 'date' , 'max_participants' , 'attendee']
         
 class AttendeeSerializer(serializers.ModelSerializer):
     class Meta:
@@ -18,4 +19,4 @@ class AttendeeSerializer(serializers.ModelSerializer):
 class TicketSerizlizer(serializers.ModelSerializer):
     class Meta:
         model = Ticket
-        fields = ['id']
+        fields = ['id' , 'event' , 'attendee']

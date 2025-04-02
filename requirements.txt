@@ -1,0 +1,7 @@
+django
+djangorestframework
+django-jazzmin
+djoser
+drf_spectacular
+psycopg2
+psycopg2-binary

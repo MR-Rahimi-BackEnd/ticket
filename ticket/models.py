@@ -1,7 +1,12 @@
 from django.db import models
 
 
-
+class Attendee(models.Model):
+    name = models.CharField(max_length=50)
+    email = models.EmailField(max_length=254 , unique=True)
+    
+    def __str__(self):
+        return f'{self.name}' 
 
 class Event(models.Model):
     title = models.CharField(max_length=100)
@@ -9,17 +14,13 @@ class Event(models.Model):
     location = models.TextField()
     participants = models.IntegerField(default=0)
     max_participants = models.IntegerField()
+    attendee = models.ManyToManyField(Attendee , blank=True)
     def __str__(self):
         return f'{self.title} -- {self.id}'
     
 
 
-class Attendee(models.Model):
-    name = models.CharField(max_length=50)
-    email = models.EmailField(max_length=254 , unique=True)
-    
-    def __str__(self):
-        return f'{self.name} -{self.id}' 
+
     
 class Ticket(models.Model):
     event = models.ForeignKey(Event, on_delete=models.CASCADE)
