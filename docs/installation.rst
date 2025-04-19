@@ -1,7 +1,6 @@
-نصب و راه‌اندازی
+installation
 ================
-
-برای نصب این پروژه، از دستورهای زیر استفاده کنید:
+To install this project, use the following commands:
 
 .. code-block:: bash
 
