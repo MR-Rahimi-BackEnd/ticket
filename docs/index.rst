@@ -1,34 +1,21 @@
-.. ticket documentation master file, created by
-   sphinx-quickstart on Sat Apr 19 15:13:36 2025.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 ticket documentation
 ====================
 
-Add your content using ``reStructuredText`` syntax. See the
-`reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
-documentation for details.
-
-
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
-
-
+   :caption: فهرست:
 
 سلام دنیا
 =========
 
 این پروژه مربوط به سیستم مدیریت بلیط است. در این مستندات، اطلاعات مورد نیاز برای استفاده از پروژه آورده شده است.
 
-========================================
-.. table:: Example Table
+.. table:: جدول نمونه
 
-   +------------+----------+
-   | Header 1   | Header 2 |
-   +------------+----------+
-   | Row 1 Col 1| Row 1 Col 2 |
-   +------------+----------+
-
-==========================================
+   +--------------+--------------+
+   | عنوان اول    | عنوان دوم    |
+   +==============+==============+
+   | داده ۱-۱     | داده ۱-۲     |
+   +--------------+--------------+
+   | داده ۲-۱     | داده ۲-۲     |
+   +--------------+--------------+
