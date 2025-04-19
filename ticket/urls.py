@@ -9,7 +9,6 @@ router = routers.DefaultRouter()
 router.register('envent' , views.EventViewSet , basename='event')
 router.register('ticket' , views.TicketViewSet , basename='ticket')
 router.register('attendee' , views.AttendeeViewSet , basename='attendee')
-router.register('cache', views.CacheTestViewSet , basename='cache')
 
 urlpatterns = [
     path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
@@ -17,3 +16,5 @@ urlpatterns = [
     path("api/schema/redoc/", SpectacularRedocView.as_view(url_name="schema"), name="redoc"),
     path('api/',include(router.urls)),
 ]
+
+
