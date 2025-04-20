@@ -6,7 +6,7 @@ ticket documentation
    :caption: menu:
 
    installation   
-   models
+   model
 
 hello word
 =========
