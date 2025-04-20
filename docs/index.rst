@@ -3,9 +3,9 @@ ticket documentation
 
 .. toctree::
    :maxdepth: 2
-   :caption: فهرست:
+   :caption: menu:
 
-   installation
+   installation   
    models
 
 hello word
