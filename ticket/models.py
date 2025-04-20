@@ -2,6 +2,7 @@ from django.db import models
 
 
 class Attendee(models.Model):
+    """Represents someone attending an event."""
     name = models.CharField(max_length=50)
     email = models.EmailField(max_length=254 , unique=True)
     
