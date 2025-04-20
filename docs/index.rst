@@ -6,6 +6,7 @@ ticket documentation
    :caption: فهرست:
 
    installation
+   models
 
 hello word
 =========
