@@ -6,7 +6,7 @@ My Models
    :undoc-members:
    :show-inheritance:
 
-hello word
+Attendee
 ========================
 hello word 2 
 ========================
