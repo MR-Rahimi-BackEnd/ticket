@@ -7,6 +7,7 @@ class Attendee(models.Model):
     email = models.EmailField(max_length=254 , unique=True)
     
     def __str__(self):
+        """Return the name of the attendee."""
         return f'{self.name}' 
 
 class Event(models.Model):
